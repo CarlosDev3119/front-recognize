@@ -1,0 +1,289 @@
+/* Reiniciar márgenes y rellenos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url(../img/codigotesi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* Estilos del encabezado */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    /* background: rgba(28, 43, 66, 0.9); */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d7e3e1;
+    z-index: 99;
+    font-family: 'GMX', sans-serif;
+}
+
+/* Estilo de enlaces en el encabezado */
+header a {
+    font-size: 1.1em;
+    color: #fefdfd;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 15px;
+    position: relative;
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #00ac00;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+header a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Contenedor de bienvenida */
+.login-container1 {
+    display: flex;
+    border-radius: 50px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.742);
+    height: 500px; /* Reduce la altura */
+    width:650px;  /* Reduce el ancho */
+    max-width: 900px; /* Puedes mantener esto para pantallas grandes */
+    transition: all 1s ease;
+    margin: 10px auto;
+    border: transparent;
+    background: linear-gradient(135deg, rgb(242, 239, 232), rgb(242, 239, 232));
+    /* Gradiente de fondo */
+}
+
+/* Recuadro Bienvenido (opcional, si necesitas estilos específicos) */
+
+
+/* Información del contenedor */
+.information {
+    width: 60%;
+    background-color: #1c2b42;
+    color: #ffffff;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    text-align: center;
+    font-family: 'GMX', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.information h2 {
+    font-size: 2.5rem;
+    color: #f3f3f3;
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.information p {
+    color: #6fbf8b;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Contenedor de iniciar sesión */
+.login-container {
+    width: 40%;
+    background-color: #a5a5a5;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-family: 'GMX', sans-serif;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #06651c;
+    border-radius: 30px;
+    padding: 12px 20px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.input-container i {
+    margin-right: 10px;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    font-size: 1em;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.input-container:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.input-container:focus-within {
+    border-color: #2a9d8f;
+    box-shadow: 0 0 10px rgba(42, 157, 143, 0.5);
+}
+
+.input-container:focus-within i {
+    color: #2a9d8f;
+}
+
+.input-container input:focus::placeholder {
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+/* Animación para la etiqueta de entrada */
+.input-container input:focus {
+    transform: scale(1.02);
+}
+
+/* Animación para el icono al hacer foco */
+@keyframes iconBounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.input-container:focus-within i {
+    animation: iconBounce 0.5s ease-in-out;
+}
+
+
+/* Botón elegante */
+.elegant-button {
+    font-size: 1em;
+    background-color: #2a3b4c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.elegant-button:hover {
+    background-color: #1b2836;
+    transform: scale(1.05);
+}
+
+/* Campo de entrada elegante */
+.elegant-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #06651c;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.elegant-input i {
+    margin-right: 10px;
+    color: #888;
+}
+
+/* Estilo del video */
+.unique-video {
+    width: 100%;
+    max-height: 80vh;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+/* Botón personalizado */
+.unique-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.unique-button:hover {
+    background-color: #45a049;
+}
+
+.unique-button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+/* Estilos responsivos */
+@media (max-width: 900px) {
+    .login-container1 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .information, .login-container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .unique-title {
+        font-size: 1.5em;
+    }
+
+    .unique-video {
+        max-height: 50vh;
+    }
+
+    .elegant-button {
+        width: 80%;
+    }
+}
